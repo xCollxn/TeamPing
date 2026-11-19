@@ -114,7 +114,7 @@ The Bedrock packs are prebuilt in `plugin/bedrock-paket/`. To change them, edit 
 
 | Plugin | Companion mod | Minecraft | Bedrock packs |
 |---|---|---|---|
-| 1.15.0 | 1.14.0 | 26.3 (Paper / Fabric) | 1.2.0 |
+| 1.15.0 | 1.14.1 | 26.3 (Paper / Fabric) | 1.2.0 |
 
 Use the plugin and mod versions from the same release. Players without the mod simply get the plugin-only features.
 

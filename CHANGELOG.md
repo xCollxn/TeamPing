@@ -1,6 +1,6 @@
 # Changelog
 
-## Plugin 1.15.0 · Companion mod 1.14.0 · Bedrock packs 1.2.0 (first public release)
+## Plugin 1.15.0 · Companion mod 1.14.1 · Bedrock packs 1.2.0 (first public release)
 - Squads, pings with light beam, item/mob/danger pings, map ping, death point, directional sound
 - Bedrock support: native Bedrock-style menus, emote pings, light beam block, HUD squad overview.
   Packs are installed into Geyser automatically.
