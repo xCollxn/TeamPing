@@ -1,0 +1,38 @@
+{
+  "resource_pack_name": "teamping",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "teamping_strahl_rot": {
+      "textures": "textures/blocks/teamping/strahl_rot"
+    },
+    "teamping_strahl_orange": {
+      "textures": "textures/blocks/teamping/strahl_orange"
+    },
+    "teamping_strahl_gelb": {
+      "textures": "textures/blocks/teamping/strahl_gelb"
+    },
+    "teamping_strahl_gruen": {
+      "textures": "textures/blocks/teamping/strahl_gruen"
+    },
+    "teamping_strahl_tuerkis": {
+      "textures": "textures/blocks/teamping/strahl_tuerkis"
+    },
+    "teamping_strahl_hellblau": {
+      "textures": "textures/blocks/teamping/strahl_hellblau"
+    },
+    "teamping_strahl_blau": {
+      "textures": "textures/blocks/teamping/strahl_blau"
+    },
+    "teamping_strahl_lila": {
+      "textures": "textures/blocks/teamping/strahl_lila"
+    },
+    "teamping_strahl_pink": {
+      "textures": "textures/blocks/teamping/strahl_pink"
+    },
+    "teamping_strahl_weiss": {
+      "textures": "textures/blocks/teamping/strahl_weiss"
+    }
+  }
+}

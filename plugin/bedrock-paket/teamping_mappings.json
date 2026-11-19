@@ -1,0 +1,243 @@
+{
+  "format_version": 1,
+  "blocks": {
+    "minecraft:light": {
+      "name": "teamping_strahl",
+      "display_name": "Ping",
+      "geometry": "geometry.teamping_strahl",
+      "material_instances": {
+        "*": {
+          "texture": "teamping_strahl_weiss",
+          "render_method": "blend",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "light_emission": 0,
+      "light_dampening": 0,
+      "only_override_states": true,
+      "state_overrides": {
+        "level=1,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_rot",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=2,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_orange",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=3,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_gelb",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=4,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_gruen",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=5,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_tuerkis",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=6,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_hellblau",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=7,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_blau",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=8,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_lila",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=9,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_pink",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=10,waterlogged=false": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_weiss",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        },
+        "level=1,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_rot",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=2,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_orange",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=3,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_gelb",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=4,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_gruen",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=5,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_tuerkis",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=6,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_hellblau",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=7,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_blau",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=8,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_lila",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=9,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_pink",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        },
+        "level=10,waterlogged=true": {
+          "material_instances": {
+            "*": {
+              "texture": "teamping_strahl_weiss",
+              "render_method": "blend",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          },
+          "geometry": "geometry.teamping_strahl_breit",
+          "light_emission": 15
+        }
+      }
+    }
+  }
+}

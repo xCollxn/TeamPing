@@ -1,0 +1,37 @@
+# TeamPing – settings (old German key names from earlier versions still work)
+
+# How long a player's own ping stays visible (seconds)
+ping-seconds: 6
+# How many own pings a player can have at once (the next one replaces the oldest)
+max-pings: 3
+# How long a map ping (Xaero map / companion mod) stays visible – one per player (seconds)
+map-ping-seconds: 30
+# How long a squad member's death point stays visible (seconds)
+death-point-seconds: 300
+# How far players can ping (blocks; the companion mod can ping further using coordinates)
+range: 250
+# Minimum time between two pings of a player (milliseconds)
+cooldown-ms: 1500
+# Height of the light beam (blocks)
+beam-height: 80
+# Java: sneak + F (swap hands) pings
+shift-f: true
+# Tapping sneak twice quickly pings: all | bedrock | off
+double-sneak: off
+# Time window for the double sneak (milliseconds)
+double-sneak-window-ms: 400
+# Beam look: glow | band | glass | core | concrete (glow and band cast no shadows with shaders)
+beam-style: glow
+# Bedrock beam: light = custom light beam block (resource pack + Geyser mapping, set up automatically) | glass = stained glass
+bedrock-beam: light
+# One-time move to a new world: enter an id (e.g. "2025-01-01") – every player starts at the world spawn on their
+# first join afterwards (items/stats are kept, old bed is forgotten). Empty = off.
+world-move: ""
+# Put TeamPing's Bedrock resource packs (light beam, squad windows) and the block mapping into Geyser's
+# packs/ and custom_mappings/ folders automatically (only missing or outdated files). false = manage them yourself.
+bedrock-install-packs: true
+# Bedrock forms: show Java players' heads (loaded by the Bedrock device from the external service mc-heads.net,
+# which receives the player names). Off = default Steve head, no external service.
+bedrock-player-heads: false
+# Troubleshooting: writes every ping aim result to the log and enables test commands for OPs
+debug: false

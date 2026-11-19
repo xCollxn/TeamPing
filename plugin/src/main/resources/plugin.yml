@@ -1,0 +1,20 @@
+name: TeamPing
+version: '${version}'
+main: io.github.xcollxn.teamping.TeamPing
+api-version: '1.21'
+description: Squads and Apex-style pings with a light beam - for Java and Bedrock (Geyser) players
+author: xCollxn
+website: https://modrinth.com/plugin/teamping
+softdepend: [floodgate, Geyser-Spigot]
+commands:
+  squad:
+    description: Opens the squad menu (or use a sub command)
+    usage: /squad [create|join|accept|invite|kick|leader|color|pingcolor|controls|overview|open|closed|disband|leave|list|help]
+    aliases: [sq]
+  ping:
+    description: Pings the spot you are looking at for your squad
+    usage: /ping
+    aliases: [p]
+  sc:
+    description: Squad chat (without text = toggle)
+    usage: /sc [message]

@@ -1,0 +1,15 @@
+# build output
+build/
+.gradle/
+run/
+out/
+*.class
+# local copies of other mods/plugins (never commit third-party jars)
+libs/
+# IDE
+.idea/
+*.iml
+.vscode/
+# Bedrock pack build: Mojang reference files are not ours to share
+plugin/bedrock-paket/vorlage/
+__pycache__/

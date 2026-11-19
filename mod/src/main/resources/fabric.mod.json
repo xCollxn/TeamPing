@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "teamping",
+	"version": "${version}",
+	"name": "TeamPing Companion",
+	"description": "Client companion for the TeamPing server plugin: pings sit right on the target (visible through walls, with arrows at the screen edge), far pings via map and Distant Horizons, item pings with icons, a squad overview and your own ping style. Works on servers with Java and Bedrock (Geyser) players.",
+	"authors": [
+		"xCollxn"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/teamping-companion",
+		"sources": "https://github.com/xCollxn/TeamPing",
+		"issues": "https://github.com/xCollxn/TeamPing/issues"
+	},
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"io.github.xcollxn.teampingcompanion.TeamPingClient"
+		],
+		"modmenu": [
+			"io.github.xcollxn.teampingcompanion.ModMenuAnbindung"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"xaerominimap": "*"
+	},
+	"icon": "assets/teamping/icon.png"
+}

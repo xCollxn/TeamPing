@@ -1,0 +1,51 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+repositories {
+	mavenCentral()
+	// optional mods, only needed to compile (Modrinth Maven: project id : version id)
+	exclusiveContent {
+		forRepository { maven { name = "Modrinth"; url = "https://api.modrinth.com/maven" } }
+		filter { includeGroup "maven.modrinth" }
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	// all optional at runtime – only needed to compile:
+	compileOnly "maven.modrinth:1bokaNcj:MfxfgXaO"   // Xaero's Minimap fabric-26.3-26.6.2 (map pings, waypoints)
+	compileOnly "maven.modrinth:mOgUt4GM:xckkBHD5"   // Mod Menu 21.0.1 (settings button in the mod list)
+	compileOnly "maven.modrinth:uCdwusMi:TGgEbP9A"   // Distant Horizons 3.3.4-26.3 (far pings beyond render distance)
+}
+
+// Development only: gradlew runClient -Ptptest=<script file> → joins localhost:25600 and plays the script (TestPilot)
+loom {
+	runs {
+		client {
+			programArgs "--username", "TestA"
+			if (project.hasProperty("tptest")) {
+				vmArg "-Dteamping.test=@" + project.property("tptest")
+				programArgs "--quickPlayMultiplayer", "localhost:25600", "--width", "1920", "--height", "1080"
+			}
+		}
+	}
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+	filesMatching("fabric.mod.json") { expand "version": version }
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+	it.options.encoding = "UTF-8"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}

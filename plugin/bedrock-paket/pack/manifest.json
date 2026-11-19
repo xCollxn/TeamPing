@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "TeamPing",
+    "description": "Light beam for TeamPing pings",
+    "uuid": "5b8d7f0e-1c2a-4e7a-9f3b-7a1e2c4d6f01",
+    "version": [
+      1,
+      2,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "0c6e2b9a-3d4f-4b8e-a1c2-9e8f7d6c5b02",
+      "version": [
+        1,
+        2,
+        0
+      ]
+    }
+  ]
+}

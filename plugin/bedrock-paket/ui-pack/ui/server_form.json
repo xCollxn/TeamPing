@@ -1,0 +1,663 @@
+{
+  "namespace": "server_form",
+  "main_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "replace",
+        "control_name": "server_form_factory",
+        "value": {
+          "server_form_factory": {
+            "type": "factory",
+            "control_ids": {
+              "long_form": "@server_form.tp_weiche",
+              "custom_form": "@server_form.custom_form"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "tp_weiche": {
+    "type": "panel",
+    "size": [
+      0,
+      0
+    ],
+    "controls": [
+      {
+        "standard@server_form.long_form": {
+          "bindings": [
+            {
+              "binding_name": "#title_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#title_text - '§t§p') = #title_text)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "teamping@server_form.tp_fenster": {
+          "bindings": [
+            {
+              "binding_name": "#title_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#title_text - '§t§p') = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tp_leer": {
+    "type": "panel",
+    "size": [
+      0,
+      0
+    ]
+  },
+  "tp_fenster": {
+    "type": "panel",
+    "size": [
+      320,
+      220
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 2,
+    "controls": [
+      {
+        "reiter_leiste": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%c",
+            24
+          ],
+          "offset": [
+            6,
+            0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 1,
+          "factory": {
+            "name": "buttons",
+            "control_ids": {
+              "button": "@server_form.tp_reiter",
+              "label": "@server_form.tp_leer",
+              "header": "@server_form.tp_leer",
+              "divider": "@server_form.tp_leer"
+            }
+          },
+          "collection_name": "form_buttons",
+          "bindings": [
+            {
+              "binding_name": "#form_button_contents",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      },
+      {
+        "rahmen": {
+          "type": "image",
+          "texture": "textures/ui/dialog_background_opaque",
+          "size": [
+            "100%",
+            "100% - 21px"
+          ],
+          "offset": [
+            0,
+            21
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 3,
+          "controls": [
+            {
+              "titel": {
+                "type": "label",
+                "text": "#tp_titel",
+                "color": "$title_text_color",
+                "shadow": false,
+                "layer": 2,
+                "offset": [
+                  8,
+                  7
+                ],
+                "size": [
+                  "100% - 32px",
+                  10
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "#title_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(#title_text - '§t§p')",
+                    "target_property_name": "#tp_titel"
+                  }
+                ]
+              }
+            },
+            {
+              "zu@common.close_button": {
+                "$close_button_offset": [
+                  -4,
+                  4
+                ],
+                "layer": 4
+              }
+            },
+            {
+              "bereich": {
+                "type": "panel",
+                "size": [
+                  "100% - 10px",
+                  "100% - 26px"
+                ],
+                "offset": [
+                  5,
+                  21
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "layer": 1,
+                "controls": [
+                  {
+                    "scrolling_panel@common.scrolling_panel": {
+                      "anchor_to": "top_left",
+                      "anchor_from": "top_left",
+                      "$show_background": false,
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "$scrolling_content": "server_form.tp_inhalt",
+                      "$scroll_size": [
+                        5,
+                        "100% - 4px"
+                      ],
+                      "$scrolling_pane_size": [
+                        "100% - 4px",
+                        "100% - 2px"
+                      ],
+                      "$scrolling_pane_offset": [
+                        2,
+                        1
+                      ],
+                      "$scroll_bar_right_padding_size": [
+                        0,
+                        0
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tp_inhalt": {
+    "type": "stack_panel",
+    "size": [
+      "100% - 4px",
+      "100%c"
+    ],
+    "orientation": "vertical",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "text_panel": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%c + 8px"
+          ],
+          "controls": [
+            {
+              "text": {
+                "type": "label",
+                "text": "#form_text",
+                "color": [
+                  0.3,
+                  0.3,
+                  0.3
+                ],
+                "offset": [
+                  3,
+                  3
+                ],
+                "size": [
+                  "100% - 6px",
+                  "default"
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "knoepfe": {
+          "type": "stack_panel",
+          "size": [
+            "100% - 4px",
+            "100%c"
+          ],
+          "offset": [
+            2,
+            0
+          ],
+          "orientation": "vertical",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "factory": {
+            "name": "buttons",
+            "control_ids": {
+              "button": "@server_form.tp_zeile",
+              "label": "@server_form.dynamic_label",
+              "header": "@server_form.dynamic_header",
+              "divider": "@settings_common.option_group_section_divider"
+            }
+          },
+          "collection_name": "form_buttons",
+          "bindings": [
+            {
+              "binding_name": "#form_button_contents",
+              "binding_name_override": "#collection_length"
+            }
+          ]
+        }
+      },
+      {
+        "abstand": {
+          "type": "panel",
+          "size": [
+            "100%",
+            3
+          ]
+        }
+      }
+    ]
+  },
+  "tp_zeile": {
+    "type": "panel",
+    "size": [
+      "100%",
+      31
+    ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(((#form_button_text - '§p§1') - '§p§2') = #form_button_text)",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "knopf@server_form.tp_knopf": {}
+      }
+    ]
+  },
+  "tp_knopf@common_buttons.light_content_button": {
+    "size": [
+      "100%",
+      29
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$pressed_button_name": "button.form_button_click",
+    "$button_content": "server_form.tp_knopf_inhalt",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ]
+  },
+  "tp_knopf_inhalt": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$text_color|default": [
+      0.3,
+      0.3,
+      0.3
+    ],
+    "controls": [
+      {
+        "symbol": {
+          "type": "image",
+          "size": [
+            18,
+            18
+          ],
+          "offset": [
+            5,
+            0
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 2,
+          "bindings": [
+            {
+              "binding_name": "#form_button_texture",
+              "binding_name_override": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_name": "#form_button_texture_file_system",
+              "binding_name_override": "#texture_file_system",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "text": {
+          "type": "label",
+          "text": "#form_button_text",
+          "color": "$text_color",
+          "shadow": false,
+          "layer": 2,
+          "size": [
+            "100% - 34px",
+            "default"
+          ],
+          "offset": [
+            29,
+            0
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "bindings": [
+            {
+              "binding_name": "#form_button_text",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tp_reiter": {
+    "type": "panel",
+    "size": [
+      27,
+      24
+    ],
+    "bindings": [
+      {
+        "binding_name": "#form_button_text",
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not (((#form_button_text - '§p§1') - '§p§2') = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "aktiv": {
+          "type": "panel",
+          "size": [
+            26,
+            24
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 6,
+          "bindings": [
+            {
+              "binding_name": "#form_button_text",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#form_button_text - '§p§2') = #form_button_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "k@server_form.tp_reiter_knopf": {
+                "$tex": "textures/ui/TabTopFront",
+                "$tex_hover": "textures/ui/TabTopFront"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "normal": {
+          "type": "panel",
+          "size": [
+            26,
+            22
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            2
+          ],
+          "layer": 0,
+          "bindings": [
+            {
+              "binding_name": "#form_button_text",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#form_button_text - '§p§2') = #form_button_text)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "k@server_form.tp_reiter_knopf": {
+                "$tex": "textures/ui/TabTopBack",
+                "$tex_hover": "textures/ui/TabTopBackHover"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tp_reiter_knopf@common.button": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$pressed_button_name": "button.form_button_click",
+    "$tex|default": "textures/ui/TabTopBack",
+    "$tex_hover|default": "textures/ui/TabTopBackHover",
+    "bindings": [
+      {
+        "binding_type": "collection_details",
+        "binding_collection_name": "form_buttons"
+      }
+    ],
+    "controls": [
+      {
+        "default": {
+          "type": "image",
+          "texture": "$tex",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "symbol": {
+                "type": "image",
+                "size": [
+                  16,
+                  16
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_texture",
+                    "binding_name_override": "#texture",
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_name": "#form_button_texture_file_system",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hover": {
+          "type": "image",
+          "texture": "$tex_hover",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "symbol": {
+                "type": "image",
+                "size": [
+                  16,
+                  16
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_texture",
+                    "binding_name_override": "#texture",
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_name": "#form_button_texture_file_system",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "image",
+          "texture": "$tex_hover",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1,
+          "controls": [
+            {
+              "symbol": {
+                "type": "image",
+                "size": [
+                  16,
+                  16
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_texture",
+                    "binding_name_override": "#texture",
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_name": "#form_button_texture_file_system",
+                    "binding_name_override": "#texture_file_system",
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
+                    "target_property_name": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
