@@ -4,7 +4,7 @@ main: io.github.xcollxn.teamping.TeamPing
 api-version: '1.21'
 description: Squads and Apex-style pings with a light beam - for Java and Bedrock (Geyser) players
 author: xCollxn
-website: https://modrinth.com/plugin/teamping
+website: https://modrinth.com/plugin/teamping-plugin
 softdepend: [floodgate, Geyser-Spigot]
 commands:
   squad:
